@@ -1,5 +1,6 @@
 import qrcode from "qrcode-terminal";
 import { Client, Message, Events, LocalAuth } from "whatsapp-web.js";
+import express from "express";
 
 // Constants
 import constants from "./constants";
@@ -88,6 +89,20 @@ const start = async () => {
 
 	// WhatsApp initialization
 	client.initialize();
+
+	// Create express app
+	const app = express();
+
+	// Define health check endpoint
+	app.get("/healthz", (req, res) => {
+		res.send("OK");
+	});
+
+	// Start HTTP server
+	app.listen(8080, () => {
+		console.log("HTTP server started on port 8080");
+	});
+
 };
 
 start();
