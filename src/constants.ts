@@ -1,3 +1,5 @@
+import config from "./config";
+
 interface IConstants {
 	// WhatsApp status broadcast
 	statusBroadcast: string;
@@ -8,7 +10,7 @@ interface IConstants {
 
 const constants: IConstants = {
 	statusBroadcast: "status@broadcast",
-	sessionPath: "./"
+	sessionPath: config.whatsAppSessionPath // "./"
 };
 
 export default constants;

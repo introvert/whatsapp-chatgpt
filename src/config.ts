@@ -48,6 +48,10 @@ interface IConfig {
 
 // Config
 const config: IConfig = {
+	// path to store Whatsapp data
+	whatsAppSessionPath: process.env.WHATSAPP_SESSION_PATH || "./", // Default: "./"
+
+	// OpenAI config
 	openAIAPIKey: process.env.OPENAI_API_KEY || "", // Default: ""
 	maxModelTokens: getEnvMaxModelTokens(), // Default: 4096
 	prePrompt: process.env.PRE_PROMPT, // Default: undefined
