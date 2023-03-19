@@ -11,6 +11,8 @@ import { handleIncomingMessage } from "./handlers/message";
 // Ready timestamp of the bot
 let botReadyTimestamp: Date | null = null;
 
+console.log("session path", constants.sessionPath);
+
 // Entrypoint
 const start = async () => {
 	cli.printIntro();

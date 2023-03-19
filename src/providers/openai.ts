@@ -18,6 +18,9 @@ let options = {
 	model: "gpt-3.5-turbo" // OpenAI parameter  `gpt-3.5-turbo` is PAID
 };
 
+console.log("openai key", config.openAIAPIKey);
+console.log("openai options", options);
+
 export const chatgpt = new ChatGPT(config.openAIAPIKey, options); // Note: options is optional
 
 // OpenAI Client (DALL-E)
